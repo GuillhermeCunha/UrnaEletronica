@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using static UrnaEletronica.Helpers.Constantes;
 using static UrnaEletronica.Helpers.Enuns;
 
 namespace UrnaEletronica.Entities.Helpers
@@ -8,23 +9,25 @@ namespace UrnaEletronica.Entities.Helpers
     {
         public static void CadastroCandidato()
         {
-            //Console.Clear();
+            Console.Clear();
 
             List<Candidato> Cadidatos = new List<Candidato>();
 
-            string encerrarCadastro = "N";
+            string encerrarCadastro = "S";
 
-            while (encerrarCadastro == "N")
+            while (encerrarCadastro == Menu.EncerraCadastro)
             {
                 Console.WriteLine("Digite o nome do candidato a ser inserido no sistema: ");
                 string nomeCandidato = Console.ReadLine();
+                Console.Clear();
 
                 Console.WriteLine("Digite o numero que esse candidato irá receber: ");
                 int numeroDoCandidatado = int.Parse(Console.ReadLine());
+                Console.Clear();
 
                 Console.WriteLine("Digite a qual cargo o candidato irá concorrer");
-
                 TipoCandidatura cargo = Enum.Parse<TipoCandidatura>(Console.ReadLine());
+                Console.Clear();
 
                 Candidato candidato = new Candidato(nomeCandidato, numeroDoCandidatado, cargo);
 

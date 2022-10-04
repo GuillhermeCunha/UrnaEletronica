@@ -17,6 +17,5 @@
             Direita = 0,
             Centro = 0,
         }
-
     }
 }
