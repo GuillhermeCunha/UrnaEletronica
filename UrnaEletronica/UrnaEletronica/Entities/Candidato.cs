@@ -1,19 +1,20 @@
 ﻿using System.Text;
+using UrnaEletronica.Helpers;
 
 namespace UrnaEletronica.Entities
 {
     class Candidato
-    {
-        private int IdentificadorDoCandidato;
+    {       
         private string NomeDoCandidato;
-        private string TipoDeCandidatura;
-        private int NumeroDeVotos; 
+        private int IdentificadorDoCandidato;
+        private Enuns.TipoCandidatura TipoCandidatura;
+        private int NumeroDeVotos = 0; 
 
-        public Candidato(int identificadorDoCandidato, string nomeDoCandidato, string tipoDeCandidatura)
+        public Candidato(string nomeDoCandidato, int identificadorDoCandidato, Enuns.TipoCandidatura tipoCandidatura)
         {
             IdentificadorDoCandidato = identificadorDoCandidato;
             NomeDoCandidato = nomeDoCandidato;
-            TipoDeCandidatura = tipoDeCandidatura;       
+            TipoCandidatura = tipoCandidatura;       
         }
 
         public int GetIdentificadorDoCandidato()
@@ -21,29 +22,14 @@ namespace UrnaEletronica.Entities
             return IdentificadorDoCandidato;
         }
 
-        public void SetIdentidicadorDoCandidato(int identificadorDoCandidato)
-        {
-            IdentificadorDoCandidato = identificadorDoCandidato; 
-        }
-
         public string GetNomeDoCandidato()
         {
             return NomeDoCandidato; 
         }
 
-        public void SetNomeDoCandidato(string nomeDoCandidato)
+        public Enuns.TipoCandidatura GetTipoCandidatura()
         {
-            NomeDoCandidato = nomeDoCandidato; ;
-        }
-
-        public string GetTipoDeCandidatura()
-        {
-            return TipoDeCandidatura; ;
-        }
-
-        public void SetTipoDeCandidatura(string tipoDeCandidatura)
-        {
-            TipoDeCandidatura = tipoDeCandidatura;
+            return TipoCandidatura; 
         }
 
         public int GetNumeroDeVotos()
@@ -51,21 +37,23 @@ namespace UrnaEletronica.Entities
             return NumeroDeVotos; 
         }
 
-        public void SetNumeroDeVotos(int numeroDeVotos)
+        public void SetNumeroDeVotos()
         {
-            NumeroDeVotos = numeroDeVotos;
+            NumeroDeVotos += 1;
         }
 
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.Append("O numero do candidato é: ");
+            sb.AppendLine("O numero do candidato é: ");
             sb.Append(IdentificadorDoCandidato);
-            sb.Append("O nome do candidato é: ");
+            sb.AppendLine("O nome do candidato é: ");
             sb.Append(NomeDoCandidato);
-            sb.Append("O candidato está concorrendo a: ");
-            sb.Append(TipoDeCandidatura);
+            sb.AppendLine("O candidato está concorrendo a: ");
+            sb.Append(TipoCandidatura);
+            sb.AppendLine("O numero de votos é: ");
+            sb.Append(NumeroDeVotos);
 
             return sb.ToString();
         }

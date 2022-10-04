@@ -1,18 +1,19 @@
-﻿using System.Text;
+﻿using System.Collections.Generic;
+using System.Text;
+using UrnaEletronica.Helpers;
 
 namespace UrnaEletronica.Entities
 {
     class Partido
     {
         private string NomeDoPartido;
-        private string PosicionamentoPolítico;
-        private string ListaDeCandidatos;
+        private Enuns.PosicaoPolitica PosicionamentoPolítico;
+        private List<Candidato> Candidatos = new List<Candidato>();
 
-        public Partido(string nomeDoPartido, string posicionamentoPolitico, string listaDeCandidatos)
+        public Partido(string nomeDoPartido, Enuns.PosicaoPolitica posicionamentoPolitico)
         {
             NomeDoPartido = nomeDoPartido;
             PosicionamentoPolítico = posicionamentoPolitico;
-            ListaDeCandidatos = listaDeCandidatos;
         }
 
         public string GetNomeDoPartido()
@@ -20,29 +21,14 @@ namespace UrnaEletronica.Entities
             return NomeDoPartido;
         }
 
-        public void SetNomeDoPartido(string nomeDoPartido)
-        {
-            NomeDoPartido = nomeDoPartido; ;
-        }
-
         public string GetPosicionamentoPolítico()
         {
-            return PosicionamentoPolítico; ;
+            return PosicionamentoPolítico.ToString();
         }
 
-        public void SetPosicionamentoPolítico(string posicionamentoPolitico)
+        public void SetListaDeCandidatos(Candidato candidato)
         {
-            PosicionamentoPolítico = posicionamentoPolitico;
-        }
-
-        public string GetNumeroDeVotos()
-        {
-            return ListaDeCandidatos;
-        }
-
-        public void SetListaDeCandidatos(string listaDeCandidatos)
-        {
-            ListaDeCandidatos = listaDeCandidatos;
+            Candidatos.Add(candidato);
         }
 
         public override string ToString()
@@ -54,8 +40,7 @@ namespace UrnaEletronica.Entities
             sb.Append("O Posicionamento Político do Partido é: ");
             sb.Append(PosicionamentoPolítico);
             sb.Append("A lista de Candidatos é: ");
-            sb.Append(ListaDeCandidatos);
-
+            //sb.Append(ListaDeCandidatos);
 
             return sb.ToString();
         }
