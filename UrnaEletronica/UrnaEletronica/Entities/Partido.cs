@@ -35,14 +35,24 @@ namespace UrnaEletronica.Entities
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.Append("O nome do partido é: ");
+            sb.AppendLine("O nome do partido é: ");
             sb.Append(NomeDoPartido);
-            sb.Append("O Posicionamento Político do Partido é: ");
+            sb.AppendLine("O Posicionamento Político do Partido é: ");
             sb.Append(PosicionamentoPolítico);
-            sb.Append("A lista de Candidatos é: ");
-            //sb.Append(ListaDeCandidatos);
+            sb.AppendLine("A lista de Candidatos é: ");
+
+            foreach (Candidato candidato in Candidatos)
+            {
+                sb.AppendLine(candidato.ToString());
+            }
 
             return sb.ToString();
         }
     }
 }
+
+
+
+
+
+

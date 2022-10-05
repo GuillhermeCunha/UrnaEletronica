@@ -1,4 +1,5 @@
 ﻿using System;
+using UrnaEletronica.Controller;
 using UrnaEletronica.Entities.Helpers;
 using UrnaEletronica.Helpers;
 
@@ -34,7 +35,7 @@ namespace Urna
                     switch (opc)
                     {
                         case 1:
-                            Console.WriteLine("OP1");
+                            CadastroDePartidos.CadastroPartido();
                             break;
 
                         case 2:
