@@ -7,7 +7,7 @@ namespace UrnaEletronica.Entities.Helpers
 {
     class CadastroDeCandidatos
     {
-        public static void CadastroCandidato()
+        public static void CadastroCandidato(List<Partido> partidos)
         {
             Console.Clear();
 
@@ -29,9 +29,21 @@ namespace UrnaEletronica.Entities.Helpers
                 TipoCandidatura cargo = Enum.Parse<TipoCandidatura>(Console.ReadLine());
                 Console.Clear();
 
+                Console.WriteLine("Deseja associar o candidato a qual Partido ?");
+
+                string nomePartido = Console.ReadLine();
+
                 Candidato candidato = new Candidato(nomeCandidato, numeroDoCandidatado, cargo);
 
                 Cadidatos.Add(candidato);
+
+                foreach (var partido in partidos)
+                {
+                    if (nomePartido == partido.GetNomeDoPartido())
+                    {
+                        partido.SetListaDeCandidatos(candidato);
+                    }
+                }
 
                 Console.WriteLine("Para inserir outro candidato digite (S) para encerrar o cadastro (N) ");
                 encerrarCadastro = Console.ReadLine(); 

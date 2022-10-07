@@ -50,9 +50,3 @@ namespace UrnaEletronica.Entities
         }
     }
 }
-
-
-
-
-
-

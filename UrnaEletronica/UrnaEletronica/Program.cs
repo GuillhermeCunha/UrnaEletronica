@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using UrnaEletronica.Controller;
+using UrnaEletronica.Entities;
 using UrnaEletronica.Entities.Helpers;
 using UrnaEletronica.Helpers;
 
@@ -7,6 +9,8 @@ namespace Urna
 {
     class Program
     {
+        public static List<Partido> partidos = new List<Partido>();
+
         static void Main(string[] args)
         {
             int opc = 0;
@@ -23,39 +27,41 @@ namespace Urna
                 Console.WriteLine("[7] Encerrar programa! ");
                 Console.WriteLine("");
                 Console.WriteLine("Digite a opção desejada: ");
+
                 opc = int.Parse(Console.ReadLine());
 
-                if (opc> 7 || opc < 1)
+                if (opc > 7 || opc < 1)
                 {
                     Console.Clear();
                     Console.WriteLine("Opção invalida! ");
+                    Console.WriteLine("");
                 }
                 else
                 {
                     switch (opc)
                     {
                         case 1:
-                            CadastroDePartidos.CadastroPartido();
+                            CadastroDePartidos.CadastroPartido(partidos);                          
                             break;
 
                         case 2:
-                            CadastroDeCandidatos.CadastroCandidato();
+                            CadastroDeCandidatos.CadastroCandidato(partidos);
                             break;
 
                         case 3:
-                            Console.WriteLine("OP3");
+                            ListaDeCandidatos.ListarCandidatos();
                             break;
 
                         case 4:
-                            Console.WriteLine("OP4");
+                            VotarEmCandidatos.VotosCandidatos();
                             break;
 
                         case 5:
-                            Console.WriteLine("OP5");
+                            ResuldadoDeCadaCandidato.ResultadoCandidatos();
                             break;
 
                         case 6:
-                            Console.WriteLine("OP6");
+                            ResultadoDasEleicoes.ResultadoEleicoes();
                             break;
 
                         default:

@@ -8,11 +8,9 @@ namespace UrnaEletronica.Controller
 {
     class CadastroDePartidos
     {
-        public static void CadastroPartido()
+        public static void CadastroPartido(List<Partido> partidos)
         {
             Console.Clear();
-
-            List<Partido> Partidos = new List<Partido>();
 
             string encerrarCadastro = "S";
 
@@ -28,7 +26,7 @@ namespace UrnaEletronica.Controller
 
                 Partido partido = new Partido(nomePartido, posicao);
 
-                Partidos.Add(partido);
+                partidos.Add(partido);
 
                 Console.WriteLine("Para inserir outro Partido digite (S) para encerrar o cadastro (N) ");
                 encerrarCadastro = Console.ReadLine();
