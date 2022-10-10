@@ -26,6 +26,11 @@ namespace UrnaEletronica.Entities
             return PosicionamentoPolítico.ToString();
         }
 
+        public List<Candidato> GetCandidatos()
+        {
+            return Candidatos;
+        }
+
         public void SetListaDeCandidatos(Candidato candidato)
         {
             Candidatos.Add(candidato);

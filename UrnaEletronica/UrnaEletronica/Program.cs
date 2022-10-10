@@ -49,7 +49,7 @@ namespace Urna
                             break;
 
                         case 3:
-                            ListaDeCandidatos.ListarCandidatos();
+                            ListaDeCandidatos.ListarCandidatos(partidos);
                             break;
 
                         case 4:

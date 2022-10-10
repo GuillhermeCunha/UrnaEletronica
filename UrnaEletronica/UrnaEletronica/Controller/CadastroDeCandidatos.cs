@@ -11,7 +11,7 @@ namespace UrnaEletronica.Entities.Helpers
         {
             Console.Clear();
 
-            List<Candidato> Cadidatos = new List<Candidato>();
+            List<Candidato> Candidatos = new List<Candidato>();
 
             string encerrarCadastro = "S";
 
@@ -35,7 +35,7 @@ namespace UrnaEletronica.Entities.Helpers
 
                 Candidato candidato = new Candidato(nomeCandidato, numeroDoCandidatado, cargo);
 
-                Cadidatos.Add(candidato);
+                Candidatos.Add(candidato);
 
                 foreach (var partido in partidos)
                 {

@@ -46,14 +46,14 @@ namespace UrnaEletronica.Entities
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine("O numero do candidato é: ");
-            sb.Append(IdentificadorDoCandidato);
-            sb.AppendLine("O nome do candidato é: ");
-            sb.Append(NomeDoCandidato);
-            sb.AppendLine("O candidato está concorrendo a: ");
-            sb.Append(TipoCandidatura);
-            sb.AppendLine("O numero de votos é: ");
-            sb.Append(NumeroDeVotos);
+            sb.Append("O numero do candidato é: ");
+            sb.AppendLine(IdentificadorDoCandidato.ToString());
+            sb.Append("O nome do candidato é: ");
+            sb.AppendLine(NomeDoCandidato.ToString());
+            sb.Append("O candidato está concorrendo a: ");
+            sb.AppendLine(TipoCandidatura.ToString());
+            sb.Append("O numero de votos é: ");
+            sb.AppendLine(NumeroDeVotos.ToString());
 
             return sb.ToString();
         }
