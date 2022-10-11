@@ -4,18 +4,18 @@
     {
         public enum TipoCandidatura
         {
-            Presidente = 0,
-            Governador = 0,
-            Senador = 0,
-            DeputadoFederal = 0,
-            DeputadoEstadual = 0
+            Presidente = 1,
+            Governador = 2,
+            Senador = 3,
+            DeputadoFederal = 4,
+            DeputadoEstadual = 5
         }
 
         public enum PosicaoPolitica
         {
-            Esquerda = 0,
-            Direita = 0,
-            Centro = 0,
+            Direita = 1,
+            Centro = 2,
+            Esquerda = 3 
         }
     }
 }

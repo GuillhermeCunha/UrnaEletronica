@@ -1,18 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using UrnaEletronica.Helpers;
+using UrnaEletronica.Entities;
 
 namespace UrnaEletronica.Controller
 {
     class VotarEmCandidatos
     {
-        public static void VotosCandidatos()
+        public static void VotosCandidatos(List<Partido> partidos)
         {
-            Console.WriteLine("Digite o numero do candidato em que você deseja votar: ");
-            int numeroCandidato = int.Parse(Console.ReadLine());
+            foreach (Partido partido in partidos)
+            {
+                foreach (Candidato candidato in partido.GetCandidatos())
+                {
+                    Console.WriteLine("Informe o candidato que vc deseja votar:");
 
+                    int voto = int.Parse(Console.ReadLine());
 
+                    if(voto == candidato.GetIdentificadorDoCandidato())
+                    {
+                        candidato.SetNumeroDeVotos();
+                    } 
+                }
+            }
         }
     }
 }

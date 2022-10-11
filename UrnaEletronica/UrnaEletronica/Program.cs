@@ -18,22 +18,22 @@ namespace Urna
             while (opc != Constantes.Menu.EncerrarPrograma)
             {
                 Console.WriteLine("(MENU)");
-                Console.WriteLine("[1] Cadastro de Partidos ");
-                Console.WriteLine("[2] Cadastro de Candidatos");
-                Console.WriteLine("[3] Listar Candidatos");
-                Console.WriteLine("[4] Votar em candidatos");
-                Console.WriteLine("[5] Resultado de cada candidato");
-                Console.WriteLine("[6] Resultado dos vencedores");
-                Console.WriteLine("[7] Encerrar programa! ");
+                Console.WriteLine("[1] CADASTRO DE PARTIDOS ");
+                Console.WriteLine("[2] CADASTRO DE CANDIDATOS ");
+                Console.WriteLine("[3] LISTAR CANDIDATOS ");
+                Console.WriteLine("[4] VOTAR EM CANDIDATOS ");
+                Console.WriteLine("[5] RESULTADO DE CADA CANDIDATO ");
+                Console.WriteLine("[6] RESULTADO DOS VENCEDORES ");
+                Console.WriteLine("[7] ENCERRAR PROGRAMA! ");
                 Console.WriteLine("");
-                Console.WriteLine("Digite a opção desejada: ");
+                Console.WriteLine("DIGITE A OPÇÃO DESEJADA: ");
 
                 opc = int.Parse(Console.ReadLine());
 
                 if (opc > 7 || opc < 1)
                 {
                     Console.Clear();
-                    Console.WriteLine("Opção invalida! ");
+                    Console.WriteLine("OPÇÃO INVALIDA! ");
                     Console.WriteLine("");
                 }
                 else
@@ -53,7 +53,7 @@ namespace Urna
                             break;
 
                         case 4:
-                            VotarEmCandidatos.VotosCandidatos();
+                            VotarEmCandidatos.VotosCandidatos(partidos);
                             break;
 
                         case 5:
@@ -66,7 +66,7 @@ namespace Urna
 
                         default:
                             Console.Clear();
-                            Console.WriteLine("Impossivel realizar outra tarefa antes de cadastrar os candidatos! ");
+                            Console.WriteLine("IMPOSSIVEL REALIZAR OUTRA TAREFA ANTES DE CADASTRAR CANDIDATOS! ");
                             Console.WriteLine("");
                             break;
                     }
