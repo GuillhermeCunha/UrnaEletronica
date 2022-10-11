@@ -40,11 +40,11 @@ namespace UrnaEletronica.Entities
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine("O nome do partido é: ");
+            sb.AppendLine("O NOME DO PARTIDO É: ");
             sb.Append(NomeDoPartido);
-            sb.AppendLine("O Posicionamento Político do Partido é: ");
+            sb.AppendLine("O POSICIONAMNETO POLÍTICO DO PARTIDO É: ");
             sb.Append(PosicionamentoPolítico);
-            sb.AppendLine("A lista de Candidatos é: ");
+            sb.AppendLine("A LISTA DE CANDIDATOS É: ");
 
             foreach (Candidato candidato in Candidatos)
             {

@@ -16,11 +16,15 @@ namespace UrnaEletronica.Controller
 
             while (encerrarCadastro == Menu.EncerraCadastro)
             {
-                Console.WriteLine("Digite o nome do Partido a ser inserido no sistema: ");
+                Console.WriteLine("DIGITE A SIGLA DO PARTIDO A SER INSERIDO NO SISTEMA: ");
                 string nomePartido = Console.ReadLine();
                 Console.Clear();
 
-                Console.WriteLine("Digite a posição politica desse partido: ");
+                Console.WriteLine("DIGITE O NUMERO CORRESPONDENTE A POSIÇÃO POLITICA DESSE PARTIDO: ");
+                Console.WriteLine("");
+                Console.WriteLine("(DIREITA = 1) - (CENTRO = 2) - (ESQUERDA = 3) ");
+                Console.WriteLine("");
+
                 PosicaoPolitica posicao = Enum.Parse<PosicaoPolitica>(Console.ReadLine());
                 Console.Clear();
 
@@ -28,9 +32,12 @@ namespace UrnaEletronica.Controller
 
                 partidos.Add(partido);
 
-                Console.WriteLine("Para inserir outro Partido digite (S) para encerrar o cadastro (N) ");
+                Console.WriteLine("PARA INSERIR OUTRO PARTIDO DIGITE (S) PARA ENCEERRAR O CADASTRO E VOLTAR PARA O MENU DIGITE (N) ");
                 encerrarCadastro = Console.ReadLine();
+
+                Console.Clear();
             }
+            Console.Clear();
         }
     }
 }

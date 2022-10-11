@@ -17,21 +17,26 @@ namespace UrnaEletronica.Entities.Helpers
 
             while (encerrarCadastro == Menu.EncerraCadastro)
             {
-                Console.WriteLine("Digite o nome do candidato a ser inserido no sistema: ");
+                Console.WriteLine("DIGITE O NOME DO CANDIDATO A SER INSERIDO NO SISTEMA: ");
                 string nomeCandidato = Console.ReadLine();
                 Console.Clear();
 
-                Console.WriteLine("Digite o numero que esse candidato irá receber: ");
+                Console.WriteLine("DIGITE O NUMERO QUE ESSE CANDIDATO IRÁ RECEVER: ");
                 int numeroDoCandidatado = int.Parse(Console.ReadLine());
                 Console.Clear();
 
-                Console.WriteLine("Digite a qual cargo o candidato irá concorrer");
+                Console.WriteLine("DIGITE O NUMERO CORRESPONDENTE A QUAL CARGO O CANDIDATO IRÁ CONCORRER ");
+                Console.WriteLine("");
+                Console.WriteLine("(PRESIDENTE = 1) - (GOVERNADOR = 2) - (SENADOR = 3) - (DEPUTADO FEDERAL = 4) - (DEPUTADO ESTADUAL = 5)");            
+                Console.WriteLine("");
+
                 TipoCandidatura cargo = Enum.Parse<TipoCandidatura>(Console.ReadLine());
                 Console.Clear();
 
-                Console.WriteLine("Deseja associar o candidato a qual Partido ?");
+                Console.WriteLine("DESEJA ASSOCIAR O CANDIDATO A QUAL PARTIDO ?");
 
                 string nomePartido = Console.ReadLine();
+                Console.Clear();
 
                 Candidato candidato = new Candidato(nomeCandidato, numeroDoCandidatado, cargo);
 
@@ -45,9 +50,12 @@ namespace UrnaEletronica.Entities.Helpers
                     }
                 }
 
-                Console.WriteLine("Para inserir outro candidato digite (S) para encerrar o cadastro (N) ");
-                encerrarCadastro = Console.ReadLine(); 
-            }  
+                Console.WriteLine("PARA INSERIR OUTRO CANDIDATO DIGITE (S) PARA ENCERRAR O CADASTRO DIGITE (N) ");
+                encerrarCadastro = Console.ReadLine();
+
+                Console.Clear();
+            }
+            Console.Clear();
         }
     }
 }

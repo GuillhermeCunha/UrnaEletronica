@@ -40,20 +40,21 @@ namespace UrnaEletronica.Entities
         public void SetNumeroDeVotos()
         {
             NumeroDeVotos += 1;
+
+            //sb.Append("O numero de votos é: ");
+            //sb.AppendLine(NumeroDeVotos.ToString());
         }
 
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-
-            sb.Append("O numero do candidato é: ");
-            sb.AppendLine(IdentificadorDoCandidato.ToString());
-            sb.Append("O nome do candidato é: ");
+           
+            sb.Append("O NOME DO CANDIDATO É: ");
             sb.AppendLine(NomeDoCandidato.ToString());
-            sb.Append("O candidato está concorrendo a: ");
+            sb.Append("O NUMERO DO CANDIDATO É: ");
+            sb.AppendLine(IdentificadorDoCandidato.ToString());
+            sb.Append("O CANDIDATO ESTÁ CONCORRENDO A: ");
             sb.AppendLine(TipoCandidatura.ToString());
-            sb.Append("O numero de votos é: ");
-            sb.AppendLine(NumeroDeVotos.ToString());
 
             return sb.ToString();
         }
