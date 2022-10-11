@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UrnaEletronica.Entities;
+using static UrnaEletronica.Helpers.Constantes;
 
 namespace UrnaEletronica.Controller
 {
@@ -14,21 +15,23 @@ namespace UrnaEletronica.Controller
             {
                 foreach (Candidato candidato in partido.GetCandidatos())
                 {
-                    Console.WriteLine("INFORME O CANDIDATO QUE VOCÊ DESEJA VOTAR:");
+                    Console.WriteLine($" VOCÊ DESEJA VOTAR NO CANDIDATO ->({candidato.GetNomeDoCandidato()})<- INFORME O NUMERO DO CANDIDATO, CASO NÃO DESEJE DIGITE (0)");
 
                     int voto = int.Parse(Console.ReadLine());
 
-                    if(voto == candidato.GetIdentificadorDoCandidato())
+                    if (voto == candidato.GetIdentificadorDoCandidato())
                     {
-                        candidato.SetNumeroDeVotos();                       
-                    } 
+                        candidato.SetNumeroDeVotos();
+                    }
                 }
             }
+            Console.Clear();
             Console.WriteLine("O SEU VOTO FOI PROCESSADO, MUITO OBRIGADO!");
+            Console.WriteLine("");
             Console.WriteLine("APERTE QUALQUER TECLA PARA VOLTAR PARA O MENU INICIAL ");
             Console.WriteLine("");
             Console.ReadKey();
             Console.Clear();
-        }
+        } 
     }
 }

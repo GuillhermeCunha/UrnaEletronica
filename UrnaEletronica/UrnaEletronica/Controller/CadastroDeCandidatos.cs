@@ -21,7 +21,7 @@ namespace UrnaEletronica.Entities.Helpers
                 string nomeCandidato = Console.ReadLine();
                 Console.Clear();
 
-                Console.WriteLine("DIGITE O NUMERO QUE ESSE CANDIDATO IRÁ RECEVER: ");
+                Console.WriteLine("DIGITE O NUMERO QUE ESSE CANDIDATO IRÁ RECEBER: ");
                 int numeroDoCandidatado = int.Parse(Console.ReadLine());
                 Console.Clear();
 

@@ -49,11 +49,11 @@ namespace UrnaEletronica.Entities
         {
             StringBuilder sb = new StringBuilder();
            
-            sb.Append("O NOME DO CANDIDATO É: ");
+            sb.Append("NOME DO CANDIDATO: ");
             sb.AppendLine(NomeDoCandidato.ToString());
-            sb.Append("O NUMERO DO CANDIDATO É: ");
+            sb.Append("NUMERO DO CANDIDATO: ");
             sb.AppendLine(IdentificadorDoCandidato.ToString());
-            sb.Append("O CANDIDATO ESTÁ CONCORRENDO A: ");
+            sb.Append("CANDIDATO CONCORRENDO AO CARGO DE: ");
             sb.AppendLine(TipoCandidatura.ToString());
 
             return sb.ToString();

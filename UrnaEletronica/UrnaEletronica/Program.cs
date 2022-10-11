@@ -57,7 +57,7 @@ namespace Urna
                             break;
 
                         case 5:
-                            ResuldadoDeCadaCandidato.ResultadoCandidatos();
+                            ResuldadoDeCadaCandidato.ResultadoCandidatos(partidos);
                             break;
 
                         case 6:
