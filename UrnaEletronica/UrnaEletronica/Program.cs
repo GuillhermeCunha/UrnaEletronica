@@ -41,7 +41,7 @@ namespace Urna
                     switch (opc)
                     {
                         case 1:
-                            CadastroDePartidos.CadastroPartido(partidos);                          
+                            CadastroDePartidos.CadastroPartido(partidos);
                             break;
 
                         case 2:
@@ -61,7 +61,7 @@ namespace Urna
                             break;
 
                         case 6:
-                            ResultadoDasEleicoes.ResultadoEleicoes();
+                            ResultadoDasEleicoes.ResultadoEleicoes(partidos);
                             break;
 
                         default:
@@ -70,7 +70,7 @@ namespace Urna
                             Console.WriteLine("");
                             break;
                     }
-                }  
+                }
             }
         }
     }

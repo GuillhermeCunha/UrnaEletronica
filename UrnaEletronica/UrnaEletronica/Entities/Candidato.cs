@@ -40,9 +40,6 @@ namespace UrnaEletronica.Entities
         public void SetNumeroDeVotos()
         {
             NumeroDeVotos += 1;
-
-            //sb.Append("O numero de votos é: ");
-            //sb.AppendLine(NumeroDeVotos.ToString());
         }
 
         public override string ToString()
