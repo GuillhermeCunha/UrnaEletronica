@@ -22,7 +22,7 @@ namespace Urna
                 Console.WriteLine("[2] CADASTRO DE CANDIDATOS ");
                 Console.WriteLine("[3] LISTAR CANDIDATOS ");
                 Console.WriteLine("[4] VOTAR EM CANDIDATOS ");
-                Console.WriteLine("[5] RESULTADO DE CADA CANDIDATO ");
+                Console.WriteLine("[5] RESULTADO INDIVIDUAL DOS CANDIDATOS ");
                 Console.WriteLine("[6] RESULTADO DOS VENCEDORES ");
                 Console.WriteLine("[7] ENCERRAR PROGRAMA! ");
                 Console.WriteLine("");
