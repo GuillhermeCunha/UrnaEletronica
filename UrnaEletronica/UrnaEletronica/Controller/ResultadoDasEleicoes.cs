@@ -51,7 +51,7 @@ namespace UrnaEletronica.Controller
             }
             else
             {
-                Console.WriteLine($"Volte para o menu e cadastre um cadidato para o cargo de {tipoCandidatura}");
+                Console.WriteLine($"VOLTE PARA O MENU E CADASTRE UM CANDIDATO PARA O CARGO DE {tipoCandidatura}");
             }
         }      
     }

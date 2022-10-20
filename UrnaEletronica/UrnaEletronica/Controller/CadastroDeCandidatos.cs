@@ -55,6 +55,7 @@ namespace UrnaEletronica.Entities.Helpers
 
                 Console.Clear();
             }
+
             Console.Clear();
         }
     }
