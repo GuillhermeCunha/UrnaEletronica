@@ -1,15 +1,13 @@
-﻿using UrnaEletronica.Entities;
+﻿using System;
+using UrnaEletronica.Entities;
 using UrnaEletronica.Helpers;
 using Xunit;
+using static UrnaEletronica.Helpers.Enuns;
 
 namespace UrnaEletronicaUnitTest
 {
     public class CandidatosUnitTest
     {
-
-        int identificador = 22;
-        string nome = "Pedro";
-
         [Fact]
         public static void ObeterIdentificadorDoCandidato_ObtendoIdentificadorDoCandidato_RetornarIdentificador()
         {
@@ -40,17 +38,40 @@ namespace UrnaEletronicaUnitTest
         [Fact]
         public static void ObeterTipoDeCandidatura_VerificarTipoDeCandidatura_RetornarTipoDeCandidatura()
         {
+            //Arrange          
+            Candidato candidato = new Candidato("Pedro", 40, Enuns.TipoCandidatura.PRESIDENTE);
+
+            //Act
+            TipoCandidatura cargo = Enum.Parse<TipoCandidatura>("PRESIDENTE");          
+
+            //Assert
+            Assert.Equal(cargo, candidato.GetTipoCandidatura());
+        }
+
+        [Fact]
+        public static void ObeterNumeroDeVotos_ObtendoNumeroDeVotos_RetornarNumeroDeVotos()
+        {
             //Arrange
-            Partido partido = new Partido("PL", Enuns.PosicaoPolitica.DIREITA);
+            Candidato candidato = new Candidato("Pedro", 40, Enuns.TipoCandidatura.PRESIDENTE);
+
+            //Act
+            int resultado = candidato.GetNumeroDeVotos();
+
+            //Assert
+            Assert.Equal(resultado, candidato.GetNumeroDeVotos());
+        }
+
+        [Fact]
+        public static void AdicionarVotosAoCandidato_IncrementarVotos_ValidarIndentificadorParaVotos()
+        {
+            //Arrange
             Candidato candidato = new Candidato("Bolsonaro", 22, Enuns.TipoCandidatura.PRESIDENTE);
 
             //Act
-            candidato.GetTipoCandidatura();
+            int resultado = candidato.SetNumeroDeVotos();
 
             //Assert
-            Assert.Equal(1, partido.GetCandidatos().Count);
+            Assert.Equal(resultado, candidato.SetNumeroDeVotos());
         }
-
-        
     }
 }

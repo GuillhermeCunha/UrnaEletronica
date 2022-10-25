@@ -37,9 +37,9 @@ namespace UrnaEletronica.Entities
             return NumeroDeVotos; 
         }
 
-        public void SetNumeroDeVotos()
+        public int SetNumeroDeVotos()
         {
-            NumeroDeVotos += 1;
+            return NumeroDeVotos + 1;
         }
 
         public override string ToString()
