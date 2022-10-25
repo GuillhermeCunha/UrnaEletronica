@@ -1,6 +1,6 @@
 ﻿namespace UrnaEletronica.Helpers
 {
-    class Enuns
+    public class Enuns
     {
         public enum TipoCandidatura
         {

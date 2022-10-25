@@ -3,7 +3,7 @@ using UrnaEletronica.Helpers;
 
 namespace UrnaEletronica.Entities
 {
-    class Candidato
+    public class Candidato
     {       
         private string NomeDoCandidato;
         private int IdentificadorDoCandidato;

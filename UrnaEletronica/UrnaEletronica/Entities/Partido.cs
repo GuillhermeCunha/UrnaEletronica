@@ -4,7 +4,7 @@ using UrnaEletronica.Helpers;
 
 namespace UrnaEletronica.Entities
 {
-    class Partido
+    public class Partido
     {
         private string NomeDoPartido;
         private Enuns.PosicaoPolitica PosicionamentoPolítico;

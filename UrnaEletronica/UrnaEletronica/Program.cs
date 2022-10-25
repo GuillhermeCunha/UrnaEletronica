@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using UrnaEletronica.Controller;
-using UrnaEletronica.Entities;
-using UrnaEletronica.Entities.Helpers;
 using UrnaEletronica.Helpers;
 
 namespace Urna
 {
     class Program
     {
-        public static List<Partido> partidos = new List<Partido>();
-
         static void Main(string[] args)
         {
             int opc = 0;
@@ -30,47 +24,7 @@ namespace Urna
 
                 opc = int.Parse(Console.ReadLine());
 
-                if (opc > 7 || opc < 1)
-                {
-                    Console.Clear();
-                    Console.WriteLine("OPÇÃO INVALIDA! ");
-                    Console.WriteLine("");
-                }
-                else
-                {
-                    switch (opc)
-                    {
-                        case 1:
-                            CadastroDePartidos.CadastroPartido(partidos);
-                            break;
-
-                        case 2:
-                            CadastroDeCandidatos.CadastroCandidato(partidos);
-                            break;
-
-                        case 3:
-                            ListaDeCandidatos.ListarCandidatos(partidos);
-                            break;
-
-                        case 4:
-                            VotarEmCandidatos.VotosCandidatos(partidos);
-                            break;
-
-                        case 5:
-                            ResuldadoDeCadaCandidato.ResultadoCandidatos(partidos);
-                            break;
-
-                        case 6:
-                            ResultadoDasEleicoes.ResultadoEleicoes(partidos);
-                            break;
-
-                        default:
-                            Console.Clear();
-                            Console.WriteLine("IMPOSSIVEL REALIZAR OUTRA TAREFA ANTES DE CADASTRAR CANDIDATOS! ");
-                            Console.WriteLine("");
-                            break;
-                    }
-                }
+                FuncoesDoMenu.CondicoesDoMenu(opc);
             }
         }
     }
