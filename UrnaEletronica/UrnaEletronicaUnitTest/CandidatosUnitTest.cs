@@ -65,7 +65,7 @@ namespace UrnaEletronicaUnitTest
         public static void AdicionarVotosAoCandidato_IncrementarVotos_ValidarIndentificadorParaVotos()
         {
             //Arrange
-            Candidato candidato = new Candidato("Bolsonaro", 22, Enuns.TipoCandidatura.PRESIDENTE);
+            Candidato candidato = new Candidato("Pedro", 40, Enuns.TipoCandidatura.PRESIDENTE);
 
             //Act
             int resultado = candidato.SetNumeroDeVotos();
