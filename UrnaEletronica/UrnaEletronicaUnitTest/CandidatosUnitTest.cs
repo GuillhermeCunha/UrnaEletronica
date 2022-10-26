@@ -34,7 +34,6 @@ namespace UrnaEletronicaUnitTest
             Assert.Equal("Pedro", nome);
         }
 
-
         [Fact]
         public static void ObeterTipoDeCandidatura_VerificarTipoDeCandidatura_RetornarTipoDeCandidatura()
         {

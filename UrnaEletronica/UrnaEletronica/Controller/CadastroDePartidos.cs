@@ -37,6 +37,7 @@ namespace UrnaEletronica.Controller
 
                 Console.Clear();
             }
+
             Console.Clear();
         }
     }

@@ -18,6 +18,7 @@ namespace UrnaEletronica.Controller
                     
                 }            
             }
+
             Console.WriteLine("");
             Console.WriteLine("APERTE QUALQUER TECLA PARA VOLTAR PARA O MENU INICIAL ");
             Console.ReadKey();

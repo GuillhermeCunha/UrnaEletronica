@@ -1,8 +1,6 @@
-﻿using System;
-using UrnaEletronica.Entities;
+﻿using UrnaEletronica.Entities;
 using UrnaEletronica.Helpers;
 using Xunit;
-using static UrnaEletronica.Helpers.Enuns;
 
 namespace UrnaEletronicaUnitTest
 {

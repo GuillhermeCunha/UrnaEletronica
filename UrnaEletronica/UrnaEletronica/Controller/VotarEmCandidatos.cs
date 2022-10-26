@@ -45,6 +45,7 @@ namespace UrnaEletronica.Controller
                     }
                 }
             }
+
             return numeroCandidato;
         }
     }
